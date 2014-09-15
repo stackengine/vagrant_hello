@@ -32,10 +32,7 @@ GLOBALSCRIPT
 # Only happens on the leader
 $leaderscript = <<LEADERSCRIPT
       echo "# BEGIN LEADER PROVISIONING"
-      sudo apt-get install --assume-yes mercurial git
-      echo "Get go source ..." 
-      wget https://storage.googleapis.com/golang/go1.3.1.linux-amd64.tar.gz &> golang.dl.log
-      sudo tar -C /usr/local -xzf go1.3.1.linux-amd64.tar.gz
+      sudo apt-get update && sudo apt-get install --assume-yes mercurial git golang
       echo "# END LEADER PROVISIONING"
 LEADERSCRIPT
 
