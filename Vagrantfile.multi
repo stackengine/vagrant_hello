@@ -32,7 +32,7 @@ GLOBALSCRIPT
 # Only happens on the leader
 $leaderscript = <<LEADERSCRIPT
       echo "# BEGIN LEADER PROVISIONING"
-      sudo apt-get update && sudo apt-get install --assume-yes mercurial git golang
+      DEBIAN_FRONTEND=noninteractive apt-get install -y golang
       echo "# END LEADER PROVISIONING"
 LEADERSCRIPT
 
